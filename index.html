@@ -142,7 +142,6 @@
     <script>
         // Scroll Animation
         const sections = document.querySelectorAll('section');
-        const navDots = document.querySelectorAll('.nav-dot');
 
         function checkScroll() {
             sections.forEach((section, index) => {
@@ -160,15 +159,6 @@
                 }
             });
         }
-
-        // Navigation Dots Click
-        navDots.forEach(dot => {
-            dot.addEventListener('click', (e) => {
-                const targetSection = document.getElementById(dot.dataset.section);
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
         window.addEventListener('scroll', checkScroll);
         window.addEventListener('load', checkScroll);
 
